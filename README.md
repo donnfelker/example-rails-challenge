@@ -78,17 +78,17 @@ On the view that shows all charges (most likely the *GET /charges* route), creat
 
 - List 2 - 
   - Header: Disputed Charges
-  - In this list set the background color of the rows to ##FF5400 and list hte Customers name, the charge amount and the date that the charge was disputed for each disputed charge. 
+  - In this list set the background color of the rows to ##FF5400 and list the Customers name, the charge amount and the date that the charge was disputed for each disputed charge. 
 
 - List 3 - 
   - Header: Successful Charges
-  - In this list simply display all the charges that were succesfull. 
+  - In this list simply display all the charges that were succesful. 
 
 ### Tests
 
 Create the following RSpec tests:
 
-  1.  Verify that there are three lists on the screen. One for Successful charges, one for failed charges and one for the disputed charges. 
+  1.  Verify that there are three lists on the screen. One for successful charges, one for failed charges and one for the disputed charges. 
   2.  Verify that in the Successful charges list there are 10 line items. Verify that in the failed charges list there are 5 failed charges. Verify that in the disputed charges list there are failed charges. 
 
 ## Once Complete
