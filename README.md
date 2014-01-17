@@ -1,6 +1,6 @@
 # Rails Programming Task
 
-### In order to be considered for a rails position, you must complete the following steps.
+### In order to be considered for a Rails position, you must complete the following steps.
 *Note: This task should take no longer than 1-2 hours at the most to complete.*
 
 
@@ -12,7 +12,7 @@
 
 ## Task
 
-- Fork this repository (if you don't know how to do that, Google is your friend)
+- Fork this repository (if you don't know how to do that, Google is your friend).
 - Create a *source* directory.
 - In the *source* directory, scaffold a simple Rails 4 web app that models a credit card charge. JSON data structure below: 
 
@@ -34,7 +34,8 @@
 
 *The charge object has a customer property, this property is the customer id from the customer model.*
 
-##### Seed 4 Customers into the system
+##### Seed 4 Customers into the system:
+
     Customer 1: 
       First Name: Johny 
       Last Name: Flow
@@ -52,7 +53,7 @@
       Last Name: Smith
 
   
-##### Seed 20 transactions (charges) into the system
+##### Seed 20 transactions (charges) into the system:
 
     10 Should be successful transactions:
       - 5 Should be linked to Customer 1
@@ -69,7 +70,8 @@
       - 2 should be linked to customer 2
 
 
-##### Create a Visual Representation of Different Charges
+##### Create a Visual Representation of Different Charges:
+
 On the view that shows all charges (most likely the *GET /charges* route), create three lists with H1 headers. 
 
 - List 1 - 
