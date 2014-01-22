@@ -1,0 +1,76 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h1>Report</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <h2>Failed Charges</h2>
+      <table class="table" id="failed-charges">
+        <thead>
+          <tr>
+            <th>Customer</th>
+            <th>Charge Amount</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+        <% @failed_charges.each do |el| %>
+          <tr style="background-color: #FF0000; color: white; font-weight:bold">
+            <td><%= Customer.find(el.customer_id).firstname %> <%= Customer.find(el.customer_id).lastname %></td>
+            <td><%= el.amount %></td>
+            <td><%= el.created_at %></td>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <h3>Disputed Charges</h3>
+      <table class="table" id="disputed-charges">
+        <thead>
+          <tr>
+            <th>Customer</th>
+            <th>Charge Amount</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+        <% @dispute_charges.each do |el| %>
+          <tr style="background-color: #FF5400; color: white; font-weight:bold">
+            <td><%= Customer.find(el.customer_id).firstname %> <%= Customer.find(el.customer_id).lastname %></td>
+            <td><%= el.amount %></td>
+            <td><%= el.created_at %></td>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <h3>Successful Charges</h3>
+      <table class="table" id="successful-charges">
+        <thead>
+          <tr>
+            <th>Customer</th>
+            <th>Charge Amount</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+        <% @success_charges.each do |el| %>
+          <tr style="background-color: green; color: white; font-weight:bold">
+            <td><%= Customer.find(el.customer_id).firstname %> <%= Customer.find(el.customer_id).lastname %></td>
+            <td><%= el.amount %></td>
+            <td><%= el.created_at %></td>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
