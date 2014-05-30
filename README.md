@@ -24,7 +24,8 @@
     "amount": 4900,
     "currency": "usd",
     "refunded": false,
-    "customer_id" : 123
+    "customer_id" : 123,
+    "disputed" : false
   }
 ```
 
