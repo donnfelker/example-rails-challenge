@@ -6,13 +6,13 @@
 
 ### Prerequisites
 
-- Please note that this will require some basic [Ruby on Rails](http://rubyonrails.org/) and [RSpec](http://rspec.info/) knowledge. 
+- Please note that this will require some basic [Ruby on Rails](http://rubyonrails.org/) and [MiniTest](http://guides.rubyonrails.org/testing.html) knowledge. 
 
 - You will need to have [Ruby on Rails](http://www.rubyonrails.org/) installed to complete this task. 
 
 ## Task
 
-- Fork this repository (if you don't know how to do that, Google is your friend).
+- Fork this repository.
 - Create a *source* directory.
 - In the *source* directory, scaffold a simple Rails 4 web app that models a credit card charge. JSON data structure below: 
 
@@ -89,7 +89,7 @@ On the view that shows all charges (most likely the *GET /charges* route), creat
 
 ### Tests
 
-Create the following RSpec tests:
+Create the following MiniTest tests:
 
   1.  Verify that there are three lists on the screen. One for successful charges, one for failed charges and one for the disputed charges. 
   2.  Verify that in the Successful charges list there are 10 line items. Verify that in the failed charges list there are 5 failed charges. Verify that in the disputed charges list there are failed charges. 
