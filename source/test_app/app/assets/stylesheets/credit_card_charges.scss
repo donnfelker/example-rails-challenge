@@ -1,0 +1,32 @@
+// Place all the styles related to the CreditCardCharges controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.list {
+  flex-basis: 30%;
+  &__header {
+    text-align: center;
+  }
+  &__content {
+    .charge-item {
+      display: flex;
+      margin: 10px 0;
+      p {
+        margin: 0 5px;
+      }
+    }
+  }
+}
+
+.failed-charges {
+  background-color: #FF0000;
+}
+
+.disputed-charges {
+  background-color: #FF5400;
+}

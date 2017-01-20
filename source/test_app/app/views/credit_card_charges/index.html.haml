@@ -1,0 +1,25 @@
+.content
+  .list.failed-charges
+    %h1.list__header Failed Charges
+    %ul.list__content
+      - @credit_card_charges.failed.each do |charge|
+        %li.charge-item
+          %p= "#{charge.customer.first_name} #{charge.customer.last_name}"
+          %p= "#{charge.amount / 100} #{charge.currency}"
+          %p= Time.at(charge.created)
+  .list.disputed-charges
+    %h1.list__header Disputed Charges
+    %ul.list__content
+      - @credit_card_charges.disputed.each do |charge|
+        %li.charge-item
+          %p= "#{charge.customer.first_name} #{charge.customer.last_name}"
+          %p= "#{charge.amount / 100}"
+          %p= Time.at(charge.created)
+  .list.successful-charges
+    %h1.list__header Successful Charges
+    %ul.list__content
+      - @credit_card_charges.successful.each do |charge|
+        %li.charge-item
+          %p= "#{charge.customer.first_name} #{charge.customer.last_name}"
+          %p= "#{charge.amount / 100}"
+          %p= Time.at(charge.created)
