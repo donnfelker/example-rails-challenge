@@ -16,4 +16,20 @@ describe 'credit_card_charges/index.haml', type: :feature do
       count: successful_charges_count
     )
   end
+
+  it 'displays all failed charges' do
+    failed_charges_count = CreditCardCharge.failed.size
+    expect(page).to have_css(
+      '.failed-charges .charge-item',
+      count: failed_charges_count
+    )
+  end
+
+  it 'displays all disputed charges' do
+    disputed_charges_count = CreditCardCharge.disputed.size
+    expect(page).to have_css(
+      '.disputed-charges .charge-item',
+      count: disputed_charges_count
+    )
+  end
 end
