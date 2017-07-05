@@ -1,0 +1,71 @@
+<h1>Failed Charges</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Customer Name</th>
+      <th>Amount</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @faileds.each do |failed| %>
+      <tr style="background-color: #FF0000;color: white;">
+        <td><%= failed.customer.full_name %></td>
+        <td><%= failed.amount %></td>
+        <td><%= failed.created_at %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<h1>Disputed Charges</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Customer Name</th>
+      <th>Amount</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @disputeds.each do |disputed| %>
+      <tr style="background-color: #FF5400;color: white;">
+        <td><%= disputed.customer.full_name %></td>
+        <td><%= disputed.amount %></td>
+        <td><%= disputed.created_at %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<h1>Successful Charges</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Customer Name</th>
+      <th>Amount</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @successfuls.each do |successful| %>
+      <tr>
+        <td><%= successful.customer.full_name %></td>
+        <td><%= successful.amount %></td>
+        <td><%= successful.created_at %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
