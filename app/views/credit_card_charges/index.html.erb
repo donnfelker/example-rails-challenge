@@ -1,6 +1,6 @@
 <h1>Failed Charges</h1>
 
-<table>
+<table id="failed">
   <thead>
     <tr>
       <th>Customer Name</th>
@@ -24,7 +24,7 @@
 
 <h1>Disputed Charges</h1>
 
-<table>
+<table id="disputed">
   <thead>
     <tr>
       <th>Customer Name</th>
@@ -35,7 +35,7 @@
 
   <tbody>
     <% @disputeds.each do |disputed| %>
-      <tr style="background-color: #FF5400;color: white;">
+      <tr style="background-color: #FF5400;color: white;" id="disputed">
         <td><%= disputed.customer.full_name %></td>
         <td><%= disputed.amount %></td>
         <td><%= disputed.created_at %></td>
@@ -48,7 +48,7 @@
 
 <h1>Successful Charges</h1>
 
-<table>
+<table id="successful">
   <thead>
     <tr>
       <th>Customer Name</th>
