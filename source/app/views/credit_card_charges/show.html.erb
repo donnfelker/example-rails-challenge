@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Created:</strong>
+  <%= @credit_card_charge.created_at %>
+</p>
+
+<p>
+  <strong>Paid:</strong>
+  <%= @credit_card_charge.paid %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= number_to_currency(@credit_card_charge.amount / 100) %>
+</p>
+
+<p>
+  <strong>Currency:</strong>
+  <%= @credit_card_charge.currency %>
+</p>
+
+<p>
+  <strong>Refunded:</strong>
+  <%= @credit_card_charge.refunded %>
+</p>
+
+<p>
+  <strong>Customer:</strong>
+  <%= @credit_card_charge.customer.try(:full_name) || '—' %>
+</p>
+
+<%= link_to 'Edit', edit_credit_card_charge_path(@credit_card_charge) %> |
+<%= link_to 'Back', credit_card_charges_path %>
