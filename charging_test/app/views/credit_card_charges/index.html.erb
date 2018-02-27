@@ -1,0 +1,39 @@
+<div>
+  <h1>Failed Charges</h1>
+  <table id='failed'>
+    <% @failed.each do |charge| %>
+      <tr>
+        <td><%= charge.customer.full_name %></td>
+        <td><%= number_to_currency(charge.amount / 100.0) %></td>
+        <td><%= charge.created_at.strftime('%d.%m.%Y') %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>
+
+
+<div>
+  <h1>Disputed Charges</h1>
+  <table id='disputed'>
+    <% @disputed.each do |charge| %>
+      <tr>
+        <td><%= charge.customer.full_name %></td>
+        <td><%= number_to_currency(charge.amount / 100.0) %></td>
+        <td><%= charge.created_at.strftime('%d.%m.%Y') %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>
+
+<div>
+  <h1>Successful Charges</h1>
+  <table id='successfull'>
+    <% @successfull.each do |charge| %>
+      <tr>
+        <td><%= charge.customer.full_name %></td>
+        <td><%= number_to_currency(charge.amount / 100.0) %></td>
+        <td><%= charge.created_at.strftime('%d.%m.%Y') %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>
