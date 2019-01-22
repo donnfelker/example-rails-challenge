@@ -19,21 +19,21 @@ describe ::ChargesController do
       end
 
       it 'should have successful charges list' do
-        expect(page).to have_css('table.table-disputed')
+        expect(page).to have_css('table.table-successfull')
       end
     end
 
     context 'lists have valid rows count' do
       it 'should display 10 successful charges' do
-        expect(page).to have_selector('tr.success', count: 10)
+        expect(page.find('.table-successfull tbody').find_all('tr').count).to eq(10)
       end
 
       it 'should display 5 disputed charges' do
-        expect(page).to have_selector('tr.warning', count: 5)
+        expect(page.find('.table-disputed tbody').find_all('tr').count).to eq(5)
       end
 
       it 'should display 5 failed charges' do
-        expect(page).to have_selector('tr.danger', count: 5)
+        expect(page.find('.table-failed tbody').find_all('tr').count).to eq(5)
       end
     end
   end

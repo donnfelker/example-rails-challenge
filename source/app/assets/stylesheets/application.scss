@@ -1,1 +1,11 @@
 @import "bootstrap";
+
+.table-failed > tbody > tr > th, .table-failed > tbody > tr > td {
+  background-color: #FF0000 !important;
+  color: white;
+}
+
+.table-disputed > tbody > tr > th, .table-disputed > tbody > tr > td {
+  background-color: #FF5400 !important;
+  color: white;
+}
