@@ -1,0 +1,24 @@
+<%
+  table_class = case type
+  when :failed
+    'table-failed'
+  when :disputed
+    'table-disputed'
+  when :successful
+    'table-successfull'
+  end
+%>
+
+<table class="table <%= table_class %>">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Customer</th>
+      <th scope="col">Amount</th>
+      <th scope="col">Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render partial: 'charge', collection: items, locals: {type: type} %>
+  </tbody>
+</table>

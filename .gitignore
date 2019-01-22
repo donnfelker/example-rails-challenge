@@ -14,3 +14,11 @@ capybara-*.html
 **.orig
 rerun.txt
 pickle-email-*.html
+
+source/.bundle
+source/log/*.log
+source/config/database.yml
+source/tmp
+
+.keep
+.byebug_history

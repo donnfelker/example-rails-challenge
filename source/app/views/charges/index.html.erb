@@ -1,0 +1,23 @@
+<section class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1> Failed Charges </h1>
+      <%= render partial: 'table', locals: {type: :failed, items: @failed } %>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-md-12">
+      <h1> Desputed Charges </h1>
+      <%= render partial: 'table', locals: {type: :disputed, items: @disputed } %>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-md-12">
+      <h1> Success Charges </h1>
+      <%= render partial: 'table', locals: {type: :successful, items: @successful } %>
+    </div>
+  </div>
+  <hr>
+</section>

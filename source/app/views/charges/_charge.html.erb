@@ -1,0 +1,16 @@
+<%
+  class_name = case type
+  when :failed
+    'danger'
+  when :disputed
+    'warning'
+  when :successful
+    'success'
+  end
+%>
+<tr class="<%= class_name %>">
+  <th scope="row">#<%= charge.id %></th>
+  <td><%= "#{charge.customer.first_name} #{charge.customer.last_name} " %></td>
+  <td><%= charge.amount.round(2) %></td>
+  <td><%= Time.at(charge.created).strftime('%H:%M %m/%d/%Y')%></td>
+</tr>
