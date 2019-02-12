@@ -3,7 +3,14 @@ require 'rails_helper'
 RSpec.describe Charge, type: :model do
 
   let(:customer) { Customer.create(first_name: 'Jose', last_name: 'Corcuera') }
-  let(:required_params) { {amount_in_cents: 100, customer: customer} }
+  let(:required_params) {
+    {
+      amount_in_cents: 100,
+      customer: customer,
+      currency: "usd",
+      created: Time.now
+    }
+  }
 
   describe "required attributes" do
 
@@ -13,6 +20,18 @@ RSpec.describe Charge, type: :model do
       charge.amount_in_cents = nil
       expect(charge.valid?).to be false
       expect(charge.errors[:amount_in_cents]).to be_present
+    end
+
+    it 'requires currency' do
+      charge.currency = nil
+      expect(charge.valid?).to be false
+      expect(charge.errors[:currency]).to be_present
+    end
+
+    it 'requires created' do
+      charge.created = nil
+      expect(charge.valid?).to be false
+      expect(charge.errors[:created]).to be_present
     end
 
   end
