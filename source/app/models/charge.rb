@@ -1,5 +1,5 @@
 class Charge < ActiveRecord::Base
-  belongs_to :customer, dependent: :destroy
+  belongs_to :customer
 
   validates :amount_in_cents, presence: true
   validates :currency, presence: true
