@@ -1,0 +1,19 @@
+<h1>Failed Charges</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Customer</th>
+      <th>Amount</th>
+      <th>Created</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% charges.each do |charge| %>
+      <tr>
+        <td><%= charge.customer.fullname %></td>
+        <td><%= number_to_currency(charge.amount, precision: 2) %></td>
+        <td><%= charge.created.strftime("%Y-%m-%d") %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
