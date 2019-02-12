@@ -20,4 +20,12 @@ RSpec.describe Customer, type: :model do
 
   end
 
+  describe "customer seed" do
+    before do
+      Rails.application.load_seed
+    end
+
+    it { expect(Customer.count).to be 4 }
+  end
+
 end
