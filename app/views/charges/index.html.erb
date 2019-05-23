@@ -1,0 +1,36 @@
+<h1>Failed Charges</h1>
+<ul id="failed-charges">
+  <% @failed_charges.each do |charge| %>
+    <li>
+      <span><%= charge.customer.full_name %></span>
+      <span>|</span>
+      <span><%= charge.amount %></span>
+      <span>|</span>
+      <span><%= charge.failed_at %></span>
+    </li>
+  <% end %>
+</ul>
+
+<h1>Disputed Charges</h1>
+<ul id="disputed-charges">
+  <% @disputed_charges.each do |charge| %>
+    <li>
+      <span><%= charge.customer.full_name %></span>
+      <span>|</span>
+      <span><%= charge.amount %></span>
+      <span>|</span>
+      <span><%= charge.disputed_at %></span>
+    </li>
+  <% end %>
+</ul>
+
+<h1>Successful Charges</h1>
+<ul id="successful-charges">
+  <% @successful_charges.each do |charge| %>
+    <li>
+      <span><%= charge.customer.full_name %></span>
+      <span>|</span>
+      <span><%= charge.amount %></span>
+    </li>
+  <% end %>
+</ul>
