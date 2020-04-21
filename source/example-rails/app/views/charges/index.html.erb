@@ -1,0 +1,11 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Failed Charges</h1>
+<%= render 'charges', charges: @failed_charges, status: "failed"  %>
+
+<h1>Disputed Charges</h1>
+<%= render 'charges', charges: @disputed_charges, status: "disputed"  %>
+
+<h1>Successfull Charges</h1>
+<%= render 'charges', charges: @success_charges, status: "success"  %>
+

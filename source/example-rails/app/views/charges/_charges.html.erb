@@ -1,0 +1,12 @@
+<ul class=<%= "#{status}-list" %>>
+    <% charges.each do |charge| %>
+        <li class=<%= status %>>
+            <%= charge.customer.name %> |
+            <%= charge.amount %> |
+            <%= charge.format_created %>
+        </li>
+    <% end %>
+</ul>
+
+<br/>
+<br/>
