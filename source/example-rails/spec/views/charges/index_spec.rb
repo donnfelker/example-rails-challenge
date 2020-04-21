@@ -33,28 +33,28 @@ RSpec.describe 'charges/index', type: :view do
     it 'displays 3 lists' do
       expect(rendered).to have_tag('ul', count: 3)
     end
-  end
 
-  describe "success charges" do
-    it "renders 10 items" do
-      expect(rendered).to have_tag('ul.success-list') do
-        with_tag('li', count: 10)
+    describe "success charges" do
+      it "renders 10 items" do
+        expect(rendered).to have_tag('ul.success-list') do
+          with_tag('li', count: 10)
+        end
       end
     end
-  end
 
-  describe "failed charges" do
-    it "renders 5 items" do
-      expect(rendered).to have_tag('ul.failed-list') do
-        with_tag('li', count: 5)
+    describe "failed charges" do
+      it "renders 5 items" do
+        expect(rendered).to have_tag('ul.failed-list') do
+          with_tag('li', count: 5)
+        end
       end
     end
-  end
 
-  describe "disputed charges" do
-    it "renders 5 items" do
-      expect(rendered).to have_tag('ul.disputed-list') do
-        with_tag('li', count: 5)
+    describe "disputed charges" do
+      it "renders 5 items" do
+        expect(rendered).to have_tag('ul.disputed-list') do
+          with_tag('li', count: 5)
+        end
       end
     end
   end
