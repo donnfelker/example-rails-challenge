@@ -95,10 +95,11 @@ Create the following MiniTest tests:
 
   1.  Verify that there are three lists on the screen. One for successful charges, one for failed charges and one for the disputed charges. 
   2.  Verify that in the Successful charges list there are 10 line items. Verify that in the failed charges list there are 5 failed charges. Verify that in the disputed charges list there are failed charges. 
+  3. Take screenshots of the app and include it in your repo.
 
 ## Once Complete
 1. Commit and Push your code to your new repository
-2. Send a link to the repo, we will review your code and get back to you
+2. Send us a link to your repository, we will review your code and screenshot and get back to you
 
 
 
