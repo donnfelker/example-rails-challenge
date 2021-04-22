@@ -1,22 +1,24 @@
 # Rails Programming Task
 
 ### In order to be considered for a Rails position, you must complete the following steps.
-*Note: This task should take no longer than 1-2 hours at the most to complete.*
+*Note: This task should take no longer than 1.5-2.5 hours at the most to complete.*
 
 
 ### Prerequisites
 
-- Please note that this will require some basic [Ruby on Rails](http://rubyonrails.org/) and [RSpec](http://rspec.info/) knowledge. 
+- Please note that this will require some basic [Ruby on Rails](http://rubyonrails.org/), [MiniTest](http://guides.rubyonrails.org/testing.html), and [Tailwind CSS](https://tailwindcss.com/) knowledge. 
 
 - You will need to have [Ruby on Rails](http://www.rubyonrails.org/) installed to complete this task. 
 
 ## Task
 
-- Fork this repository (if you don't know how to do that, Google is your friend).
+- Fork this repository.
 - Create a *source* directory.
-- In the *source* directory, scaffold a simple Rails 4 web app that models a credit card charge. JSON data structure below: 
+- In the *source* directory, scaffold a Rails web app.
+- Integrate Tailwind CSS into the Rails app. Tailwind CSS should be used to style the content. 
+- Create a model that represents a credit card charge. JSON data structure below: 
 
-```
+```json
   {
     "id": 9923,
     "created": 1389618241,
@@ -24,7 +26,8 @@
     "amount": 4900,
     "currency": "usd",
     "refunded": false,
-    "customer_id" : 123
+    "customer_id" : 123,
+    "disputed" : false
   }
 ```
 
@@ -88,14 +91,15 @@ On the view that shows all charges (most likely the *GET /charges* route), creat
 
 ### Tests
 
-Create the following RSpec tests:
+Create the following MiniTest tests:
 
   1.  Verify that there are three lists on the screen. One for successful charges, one for failed charges and one for the disputed charges. 
   2.  Verify that in the Successful charges list there are 10 line items. Verify that in the failed charges list there are 5 failed charges. Verify that in the disputed charges list there are failed charges. 
+  3. Take screenshots of the app and include it in your repo.
 
 ## Once Complete
 1. Commit and Push your code to your new repository
-2. Send us a pull request. We will review your code and get back to you
+2. Send us a link to your repository, we will review your code and screenshot and get back to you
 
 
 
