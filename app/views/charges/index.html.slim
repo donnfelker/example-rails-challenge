@@ -1,0 +1,53 @@
+.container
+  .col-lg-12
+    h1.h1 Failed
+    table.table
+      thead
+        tr.failed
+          th scope="col" #
+          th scope="col" Customer
+          th scope="col" Amount
+          th scope="col" Currency
+          th scope="col" Created
+      tbody
+        - @failed_transaction.each.with_index(1) do |transaction, position|
+          tr.failed
+            td = position
+            td = transaction.customer.full_name
+            td = transaction.dollars_amount 
+            td = transaction.currency.upcase
+            td = transaction.created_date
+    h1.h1 Disputed
+    table.table.table-dark
+      thead
+        tr.disputed
+          th scope="col" #
+          th scope="col" Customer
+          th scope="col" Amount
+          th scope="col" Currency
+          th scope="col" Created
+      tbody
+        - @disputed_transaction.each.with_index(1) do |transaction, position|
+          tr.disputed
+            td = position
+            td = transaction.customer.full_name
+            td = transaction.dollars_amount 
+            td = transaction.currency.upcase
+            td = transaction.created_date
+    h1.h1 Successful
+    table.table.table-dark
+      thead
+        tr.success
+          th scope="col" #
+          th scope="col" Customer
+          th scope="col" Amount
+          th scope="col" Currency
+          th scope="col" Created
+      tbody
+        - @successful_transaction.each.with_index(1) do |transaction, position|
+          tr
+            td = position
+            td = transaction.customer.full_name
+            td = transaction.dollars_amount 
+            td = transaction.currency.upcase
+            td = transaction.created_date
