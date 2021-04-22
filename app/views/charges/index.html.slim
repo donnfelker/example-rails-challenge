@@ -1,9 +1,9 @@
 .container
   .col-lg-12
-    h1.h1 Failed
-    table.table
+    h1.h1 Failed Charges
+    table.table.table-dark
       thead
-        tr.failed
+        tr
           th scope="col" #
           th scope="col" Customer
           th scope="col" Amount
@@ -17,10 +17,10 @@
             td = transaction.dollars_amount 
             td = transaction.currency.upcase
             td = transaction.created_date
-    h1.h1 Disputed
+    h1.h1 Disputed Charges
     table.table.table-dark
       thead
-        tr.disputed
+        tr
           th scope="col" #
           th scope="col" Customer
           th scope="col" Amount
@@ -34,10 +34,10 @@
             td = transaction.dollars_amount 
             td = transaction.currency.upcase
             td = transaction.created_date
-    h1.h1 Successful
+    h1.h1 Successful Charges
     table.table.table-dark
       thead
-        tr.success
+        tr
           th scope="col" #
           th scope="col" Customer
           th scope="col" Amount
@@ -45,7 +45,7 @@
           th scope="col" Created
       tbody
         - @successful_transaction.each.with_index(1) do |transaction, position|
-          tr
+          tr.success
             td = position
             td = transaction.customer.full_name
             td = transaction.dollars_amount 
